@@ -1,0 +1,36 @@
+.warning-tooltip {
+    --bs-tooltip-bg: #ffc107;
+    --bs-tooltip-color: #000;
+}
+
+.card {
+    width: 19rem;
+}
+
+code {
+    font-size: large;
+    font-family: serif;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.input-group-text.focusable:hover {
+    background-color: #f5f5f5;
+}
+
+.form-floating>label {
+    color: #6e7174;
+}
+
+/* Hide Input number spinner
+/* Chrome, Safari, Edge, Opera */
+input[type=number].no-spin::-webkit-outer-spin-button,
+input[type=number].no-spin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number].no-spin {
+    -moz-appearance: textfield;
+}
