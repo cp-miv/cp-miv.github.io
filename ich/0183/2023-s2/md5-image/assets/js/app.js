@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', e => {
 
-
+    [...document.querySelectorAll('[data-bs-toggle="popover"]')].forEach(e => new bootstrap.Popover(e, { 'html': true }));
+    [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(e => new bootstrap.Tooltip(e));
 
     document.querySelectorAll('input.depends-background').forEach(e => {
         e.addEventListener('input', ev => {
