@@ -17,9 +17,24 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card m-3">
+    <div class="container-fluid p-3">
+        <h4>Introduction</h4>
+        <p>
+            Cette application permet d'appliquer le Code de César; chiffrement par décallage, sur un message afin de le chiffrer ou le déchiffrer.
+            <br>
+            L'objectif est que les deux parties (personne, application) parviennent à échanger un contenu textuel sans que celui-ci ne transite en clair.
+            <br>
+            Pour ce faire, chaque lettre du message est décallée d'une certain nombre de position dans l'alphabet selon une <code>clé</code> connue.
+        </p>
+        <h4>Instruction</h4>
+        <p>
+            Deux personnes sont nécessaires pour utiliser cette application : une pour <span class="bg-primary text-white p-1 rounded-2">chiffrer</span> le message, l'autre pour le <span class="bg-warning p-1 rounded-2">déchiffrer</span>.
+            <br>
+            Répartissez-vous ces rôles, puis sélectionnez le bouton correspondant à votre mission.
+        </p>
+
+        <div class="row m-0 gap-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Chiffrer un message</h5>
                     <p class="card-text">Votre rôle est de chiffrer un message et le transmettre au destinataire.</p>
@@ -27,7 +42,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Déchiffrer un message</h5>
                     <p class="card-text">Votre rôle est de réceptionner un message et le déchiffrer à l'aide d'une clé.</p>

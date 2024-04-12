@@ -1,3 +1,8 @@
+.primary-tooltip {
+    --bs-tooltip-bg: #0d6efd;
+    --bs-tooltip-color: #FFF;
+}
+
 .warning-tooltip {
     --bs-tooltip-bg: #ffc107;
     --bs-tooltip-color: #000;

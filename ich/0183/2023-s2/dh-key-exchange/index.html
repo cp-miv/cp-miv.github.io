@@ -17,21 +17,37 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid p-3">
         <div class="row">
-            <div class="card m-3">
+            <h4>Introduction</h4>
+            <p>
+                Cette application permet de s'accorder sur un numéro secrêt à l'algorithme d'échange de clé Diffie-Hellman.
+                <br>
+                L'objectif est que les deux parties (personne, application) parviennent à avoir la même clé, sans que celle-ci ne soit échangée.
+                <br>
+                En lieu et place, elle est calculée à l'aide de valeurs transmises.
+            </p>
+            <h4>Instruction</h4>
+            <p>
+                Deux personnes sont nécessaires pour utiliser cette application : une pour <span class="bg-primary text-white p-1 rounded-2">initier</span> l'échange, l'autre pour le <span class="bg-warning p-1 rounded-2">rejoindre</span>.
+                <br>
+                Répartissez-vous ces rôles, puis sélectionnez le bouton correspondant à votre mission.
+            </p>
+        </div>
+        <div class="row m-0 gap-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Initier un échange</h5>
                     <p class="card-text">Votre rôle est d'initier l'échange de clés avec un destinataire.</p>
-                    <a class="btn btn-primary" href="init.html"><i class="bi bi-envelope-arrow-up"></i> Débuter l'échange</a>
+                    <a class="btn btn-primary" href="init.html"><i class="bi bi-box-arrow-right"></i> Initier l'échange</a>
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Rejoindre un échange</h5>
                     <p class="card-text">Votre rôle est de rejoindre un échange de clés initié.</p>
-                    <a class="btn btn-warning" href="join.html"><i class="bi bi-envelope-arrow-down"></i> Rejoindre l'échange</a>
+                    <a class="btn btn-warning" href="join.html"><i class="bi bi-box-arrow-in-right"></i> Rejoindre l'échange</a>
                 </div>
             </div>
         </div>

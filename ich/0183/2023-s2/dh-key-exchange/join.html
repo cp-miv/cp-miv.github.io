@@ -13,13 +13,30 @@
 <body>
     <nav class="navbar bg-warning">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1 text-black"><i class="bi bi-envelope-arrow-down"></i> Diffie-Hellman : Rejoindre un échange</span>
+            <span class="navbar-brand mb-0 h1"><i class="bi bi-box-arrow-in-right"></i> Diffie-Hellman : Rejoindre un échange</span>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid p-3">
         <div class="row">
-            <div class="card m-3">
+            <h4>Introduction</h4>
+            <p>Cette partie de l'application permet de rejoindre un échange de clé à l'aide de l'algorithme Diffie-Hellman.</p>
+            <h4>Instruction</h4>
+            <p>
+                Pour faciliter le suivi des opérations, cette page présente <b>8 étapes</b> durant lesquelles vous devez choisir des nombres, réaliser des calculs, transmettre des données à l'autre personne ou encore récupérer celles qu'elle vous transmet.
+            </p>
+            <p>
+                Un <span class="border border-1 p-1 rounded-2 border-secondary-subtle">champ</span> représente une valeur à inscrire et un <span class="p-1 rounded-2 bg-warning">bouton</span> fourni un message d'information.
+                <br>
+                Une <span class="text-success">informatique publique</span> peut être partagée librement avec l'autre personne tandis qu'une <span class="text-danger">information confidentielle</span> ne doit surtout pas être divulguée.
+            </p>
+            <p>
+                Si vous n'êtes pas à l'aise avec les formules, vous disposez, en bas à droite de la page, du bouton <i class="bi bi-calculator text-warning"></i> permettant de calculer automatiquement les formules.
+            </p>
+        </div>
+
+        <div class="row m-0 gap-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 1</h5>
                     <p class="card-text">Choisissez un nombre entier positif <b>secret</b> <code>Y</code>.</p>
@@ -36,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 2</h5>
                     <p class="card-text">Inscrivez le nombre <code>G</code> transmis par le destintaire.</p>
@@ -53,7 +70,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 3</h5>
                     <p class="card-text">Inscrivez le nombre <code>N</code> transmis par le destintaire.</p>
@@ -70,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 4</h5>
                     <p class="card-text">Inscrivez le nombre <code>A</code> transmis par le destintaire.</p>
@@ -87,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 5</h5>
                     <p class="card-text">Calculez le nombre <code>K</code> grâce à la formule <code>K = A<sup>Y</sup> % N</code></p>
@@ -103,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 6</h5>
                     <p class="card-text">Calculez le nombre <code>B</code> grâce à la formule <code>B = G<sup>Y</sup> % N</code></p>
@@ -119,21 +136,21 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 7</h5>
                     <p class="card-text">Transmettez le nombre <code>B</code> à l'initiateur.</p>
-                    <button class="btn btn-primary" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Information" data-bs-content="Parfait ! <i class=&#x22;bi bi-emoji-smile&#x22;></i><br>Vous pouvez passer à l'étape suivante.">
+                    <button class="btn btn-warning" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Information" data-bs-content="Parfait ! <i class=&#x22;bi bi-emoji-smile&#x22;></i><br>Vous pouvez passer à l'étape suivante.">
                         C'est fait !
                     </button>
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 8</h5>
                     <p class="card-text">Le même nombre <code>K</code> a également pu être calculé par le destinataire grâce à vos informations et à son nombre <b>secret</b>.</p>
-                    <button class="btn btn-primary" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Information" data-bs-content="Oui ! <i class=&#x22;bi bi-emoji-smile&#x22;></i><br>Et ce nombre <code>K</code> peut être utilisé comme clé dans l'algorithme de César.<br><b>Gardez-le précieusement !</b>">
+                    <button class="btn btn-warning" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Information" data-bs-content="Oui ! <i class=&#x22;bi bi-emoji-smile&#x22;></i><br>Et ce nombre <code>K</code> peut être utilisé comme clé dans l'algorithme de César.<br><b>Gardez-le précieusement !</b>">
                         Vraiment ?
                     </button>
                 </div>

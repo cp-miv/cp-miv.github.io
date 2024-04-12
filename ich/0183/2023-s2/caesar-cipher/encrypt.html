@@ -17,9 +17,21 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card m-3">
+    <div class="container-fluid p-3">
+        <h4>Introduction</h4>
+        <p>Cette partie de l'application permet de chiffrer automatiquement un message en <b>clair</b> à l'aide d'une <code>clé</code>.</p>
+        <h4>Instruction</h4>
+        <p>
+            Pour faciliter le suivi des opérations, cette page présente <b>3 étapes</b> durant lesquelles vous devez rédiger des textes, choisir des nombres ou encore transmettre des données à l'autre personne.
+        </p>
+        <p>
+            Un <span class="border border-1 p-1 rounded-2 border-secondary-subtle">champ</span> représente une valeur à inscrire.
+            <br>
+            Une <span class="text-success">informatique publique</span> peut être partagée librement avec l'autre personne tandis qu'une <span class="text-danger">information confidentielle</span> ne doit surtout pas être divulguée.
+        </p>
+
+        <div class="row m-0 gap-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 1</h5>
                     <p class="card-text">Rédigez le message en clair et qui sera chiffré à l'aide de l'algorithme de César</p>
@@ -35,10 +47,10 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 2</h5>
-                    <p class="card-text">Inscrivez la clé <code>K</code> utilisée par l'algorithme de César.</p>
+                    <p class="card-text">Inscrivez la clé <code>K</code> que l'algorithme de César doit utiliser.</p>
                     <div class="input-group has-validation">
                         <div class="form-floating is-invalid">
                             <input type="number" id="k" class="form-control no-spin depends-message" min="0" placeholder="Valeur de K">
@@ -51,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 3</h5>
                     <p class="card-text">Transmettez le message chiffré à l'aide de l'algorithme de César et de la clé <code>K</code>.

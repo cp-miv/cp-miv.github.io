@@ -13,13 +13,25 @@
 <body>
     <nav class="navbar bg-warning">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1"><i class="bi bi-lock"></i> Caesar Cipher : Déchiffrer un message</span>
+            <span class="navbar-brand mb-0 h1"><i class="bi bi-unlock"></i> Caesar Cipher : Déchiffrer un message</span>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card m-3">
+    <div class="container-fluid p-3">
+        <h4>Introduction</h4>
+        <p>Cette partie de l'application permet de déchiffrer automatiquement un message en <b>chiffré</b> à l'aide d'une <code>clé</code>.</p>
+        <h4>Instruction</h4>
+        <p>
+            Pour faciliter le suivi des opérations, cette page présente <b>3 étapes</b> durant lesquelles vous devez réceptionner des données de l'autre personne, inscrire des textes ou encore des valeurs.
+        </p>
+        <p>
+            Un <span class="border border-1 p-1 rounded-2 border-secondary-subtle">champ</span> représente une valeur à inscrire.
+            <br>
+            Une <span class="text-success">informatique publique</span> peut être partagée librement avec l'autre personne tandis qu'une <span class="text-danger">information confidentielle</span> ne doit surtout pas être divulguée.
+        </p>
+
+        <div class="row m-0 gap-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 1</h5>
                     <p class="card-text">Inscrivez le message chiffré transmis par le destinataire.</p>
@@ -35,15 +47,18 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 2</h5>
-                    <p class="card-text">Inscrivez la clé <code>K</code> utilisée par l'algorithme de César.</p>
+                    <p class="card-text">Inscrivez la clé <code>K</code> que l'algorithme de César a utilisée.</p>
                     <div class="input-group has-validation">
                         <div class="form-floating is-invalid">
                             <input type="number" id="k" class="form-control no-spin depends-message" min="0" placeholder="Valeur de K">
                             <label for="k">Valeur de <code>K</code></label>
                         </div>
+                        <a class="input-group-text focusable" tabindex="1" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Valeur de la clé <code>K</code>" data-bs-content="Cette partie de l'application est dédiée à déchiffrer le message. Ainsi, elle se charge d'inverser la clé <code>K</code> afin de soustraire sa valeur dans le décallage.">
+                            <i class="bi bi-info-lg"></i>
+                        </a>
                         <div class="invalid-feedback">
                             <i class="bi bi-exclamation-octagon"></i> Information confidentielle
                         </div>
@@ -51,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="card m-3">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Etape 3</h5>
                     <p class="card-text">Découvrez le message en clair, déchiffré à l'aide de l'algorithme de César et de la clé <code>K</code>.
