@@ -13,43 +13,50 @@
 <body>
     <nav class="navbar bg-secondary">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1 text-white"><i class="bi bi-hdd-stack"></i> Comparaison d'images</span>
+            <span class="navbar-brand mb-0 h1 text-white"><i class="bi bi-fingerprint"></i> Egalité d'image</span>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <a class="btn btn-primary mt-3" href="assets/files/image-pack-1.zip" download>Télécharger le pack d'images</a>
+    <div class="container-fluid m-3 d-flex flex-column gap-3">
+        <div class="d-flex">
+            <a class="btn btn-primary" href="assets/files/image-pack-1.zip" download>Télécharger le pack d'images</a>
+        </div>
+
+        <div class="d-flex gap-3">
+            <div class="card picker">
+                <div class="card-body">
+                    <div class="drop-zone m-3">
+                        <span class="drop-message m-3">Cliquer ou glisser-déposer pour sélectionner une image.</span>
+                        <img class="preview-image" src="" hidden>
+                    </div>
+                    <input type="file" class="file-input hidden" accept="image/*">
+                    <div class="form-floating">
+                        <input type="text" class="form-control hash-output depends-background" placeholder="Empreinte de l'image" readonly>
+                        <label>Empreinte de l'image</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card picker">
+                <div class="card-body">
+                    <div class="drop-zone m-3">
+                        <span class="drop-message m-3">Cliquer ou glisser-déposer pour sélectionner une image.</span>
+                        <img class="preview-image" src="" hidden>
+                    </div>
+                    <input type="file" class="file-input hidden" accept="image/*">
+                    <div class="form-floating">
+                        <input type="text" class="form-control hash-output depends-background" placeholder="Empreinte de l'image" readonly>
+                        <label>Empreinte de l'image</label>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="card picker m-3">
-                <div class="card-body">
-                    <div class="drop-zone m-3">
-                        <span class="drop-message m-3">Cliquer ou glisser-déposer pour sélectionner une image.</span>
-                        <img class="preview-image" src="" hidden>
-                    </div>
-                    <input type="file" class="file-input hidden" accept="image/*">
-                    <div class="form-floating">
-                        <input type="text" class="form-control hash-output depends-background" placeholder="Empreinte de l'image" readonly>
-                        <label>Empreinte de l'image</label>
-                    </div>
-                </div>
+        <div class="d-flex" id="alert-container">
+            <div class="alert alert-success d-none" role="alert">
+                Les images sont identiques
             </div>
-            <div class="card picker m-3">
-                <div class="card-body">
-                    <div class="drop-zone m-3">
-                        <span class="drop-message m-3">Cliquer ou glisser-déposer pour sélectionner une image.</span>
-                        <img class="preview-image" src="" hidden>
-                    </div>
-                    <input type="file" class="file-input hidden" accept="image/*">
-                    <div class="form-floating">
-                        <input type="text" class="form-control hash-output depends-background" placeholder="Empreinte de l'image" readonly>
-                        <label>Empreinte de l'image</label>
-                    </div>
-                </div>
+            <div class="alert alert-warning d-none" role="alert">
+                Les images sont différentes
             </div>
         </div>
     </div>

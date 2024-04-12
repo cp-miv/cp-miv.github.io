@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', e => {
     document.querySelectorAll('input.depends-background').forEach(e => {
         e.addEventListener('input', ev => {
 
-            const successClass = 'bg-success';
-            const failureClass = 'bg-warning';
+            const successClass = 'bg-success-subtle';
+            const failureClass = 'bg-warning-subtle';
 
             const currentClass = new Set([...document.querySelectorAll('.hash-output')].map(x => x.value)).size === 1
                 ? successClass
@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', e => {
                 p.classList.remove(failureClass);
                 p.classList.add(currentClass);
             });
+
+            if (currentClass === successClass) {
+                document.querySelector('#alert-container .alert-success').classList.remove('d-none');
+                document.querySelector('#alert-container .alert-warning').classList.add('d-none');
+            }
+            else {
+                document.querySelector('#alert-container .alert-success').classList.add('d-none');
+                document.querySelector('#alert-container .alert-warning').classList.remove('d-none');
+            }
         });
     });
 
